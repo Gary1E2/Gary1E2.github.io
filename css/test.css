@@ -1,0 +1,21 @@
+section {
+    border: red 1px dashed;
+    padding: 0;
+    height: auto;
+    place-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 6% 3%;
+    gap: 12% 6%;
+}
+
+.red-circle-small {
+    margin: 100px auto;
+    aspect-ratio: 2 / 1;
+    height: 100%;
+    border-radius: 100% 100% 0 0;
+    border-top: #ff3131 12px solid;
+    border-left: #ff3131 12px solid;
+    border-right: #ff3131 12px solid;
+}
