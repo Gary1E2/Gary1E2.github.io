@@ -1,11 +1,11 @@
 * {
-    /* color: #DDDDFF; */
     font-family: Helvetica, sans-serif, Arial;
 }
 
 body {
     padding: 0 0 0 0;
     background: url('../assets/stardust.png') repeat #130111;
+    color: #DDDDFF;
     /* border: red 1px dashed; */
 }
 
@@ -213,7 +213,6 @@ header ul li:hover {
     /* border: green 1px dashed; */
     font-size: 6.2cqi;
     text-indent: -3%;
-    color: #DDDDFF;
 }
 
 /* LARGE CIRCLES */
@@ -315,7 +314,6 @@ header ul li:hover {
     grid-template-columns: repeat(4, 1fr);
     gap: 2%;
     padding: 0 2% 2% 2%;
-    color: #b2b2d9;
     /* border: green 1px solid; */
 }
 
@@ -327,7 +325,7 @@ header ul li:hover {
     /* border: green 1px solid; */
     width: 100%;
     overflow: hidden;
-    place-items: center;
+    /* place-items: center; */
     background: #333333AA;
 }
     
@@ -338,7 +336,6 @@ header ul li:hover {
 
 .project-card h2 {
     padding: 0 6%;
-    color: #DDDDFF;
 }
 
 .card-img {
@@ -364,7 +361,7 @@ header ul li:hover {
     flex-wrap: wrap;
     gap: 0.5em 4%;
     width: 80%;
-    margin: -4% 0 4% 0;
+    margin: -4% auto 4% auto;
 }
 
 .skill-list div {
@@ -468,6 +465,7 @@ header ul li:hover {
     /* border: green 1px solid; */
     padding: 0 6% 10% 6%;
     /* text-align: justify; */
+    color: #b2b2d9;
 }
 
 
@@ -482,7 +480,6 @@ header ul li:hover {
 
 .cert-header2 {
     font-size: 3em;
-    color: #DDDDFF;
 }
 
 .cert-list {
@@ -499,7 +496,6 @@ header ul li:hover {
     height: 100%;
     padding: 10% 10% 0 10%;
     overflow: hidden;
-    color: #DDDDFF;
 }
 
 .cert-img {
@@ -545,8 +541,7 @@ h4:after {
 
 .about {
     display: flex;
-    border: green 1px solid;
-    color: #DDDDFF;
+    /* border: green 1px solid; */
 }
 
 .face-img {
@@ -554,13 +549,14 @@ h4:after {
     aspect-ratio: 1/1;
     margin: 2% 10%;
     overflow: hidden;
-    border: green 1px solid;
+    /* border: green 1px solid; */
     border-radius: 50%;
 }
 
 .face-img img {
     width: 100%;
-    border: green 1px solid;
+    height: 100%;
+    /* border: green 1px solid; */
 }
 
 .personal {
@@ -575,6 +571,7 @@ h4:after {
 
 .contacts {
     /* border: green 1px solid; */
+    margin: 2% 0 0 0;
     list-style-type: none;
     padding-inline-start: 0;
     display: grid;
@@ -596,7 +593,7 @@ h4:after {
 
 .contact a {
     text-decoration: none;
-    color: #DDDDFF;
+    color: #b2b2d9;
 }
 
 .contact-item {
@@ -616,29 +613,10 @@ h4:after {
     object-fit: contain;
 }
 
-.contact-info span {
-    width:100%;
-    height:100%;
-    top:0;
-    left: 0;
-    z-index: 1;
-}
-
-h1.red {background: #FF1100}
-h1.orange {background: #F17300}
-h1.yellow {background: #FFBF00}
-h1.yellow2 {background: #EFEA5A}
-h1.green {background: #5CF64A}
-h1.teal {background: #29E7CD}
-h1.blue {background: #91A6FF}
-h1.purple {background: #A42CD6}
-h1.pink {background: #FF0088}
-
-
 /* ========== FOOTER ========== */
 footer {
     /* border: orange 1px solid; */
-    color: #b2b2d9;
+    border-top: 1px #394247 solid;
 }
 
 footer ul {
@@ -650,11 +628,10 @@ footer ul {
 
 footer ul li {
     padding: 0.5em 1em;
-    border: blue 1px dashed;
+    /* border: blue 1px dashed; */
 }
 
 footer ul li a {
-    display: block;
     text-decoration: none;
     /* border: blue 1px dashed; */
     color: #b2b2d9;
@@ -667,6 +644,13 @@ footer ul li:last-child {
 
 .to-top:hover {
     background-color: #aa313155;
+}
+
+.to-top {
+    /* border: green 1px solid; */
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 #projects, #certification, #about {
