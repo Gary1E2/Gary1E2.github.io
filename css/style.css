@@ -2,10 +2,18 @@
     font-family: Helvetica, sans-serif, Arial;
 }
 
+/* Disable horizontal scrolling */
+/* Fix navigation menu buttons */
+/* Fix circle alignment */
+/* Fix 'Engineer' title size */
+/* Redesign/Add animations */
+
 body {
     padding: 0 0 0 0;
     background: url('../assets/stardust.png') repeat #130111;
+    background-attachment: fixed;
     color: #DDDDFF;
+    overflow-x: hidden;
     /* border: red 1px dashed; */
 }
 
@@ -19,6 +27,7 @@ h1 {
 header {
     position: sticky;
     background: url('../assets/stardust.png') repeat #130111;
+    /* background-attachment: fixed; */
     z-index: 1;
     top: 0;
 }
@@ -26,15 +35,13 @@ header {
 header ul {
     list-style-type: none;
     margin: 0;
-    padding: 0 0 0.5% 0;
+    padding: 0;
     display: flex;
     border-bottom: 1px #394247 solid;
 }
 
 header ul li {
     /* border: 1px green solid; */
-    display: block;
-    padding: 0.5em 1em;
     color: #b2b2d9;
 }
 
@@ -43,13 +50,19 @@ header ul li:last-child {
     /* border: pink 1px dashed; */
 }
 
-header ul li a{
+header ul li a {
+    display: block;
+    padding: 0.5em 1em;
     text-decoration: none;
     color: #b2b2d9;
 }
 
-header ul li:hover {
+header ul li a:hover {
     background-color: #aa313155;
+}
+
+.nav-decor {
+    padding: 0.5em 1em;
 }
 
 /* ========== LANDING ========== */
@@ -105,7 +118,7 @@ header ul li:hover {
 .landing-square:nth-child(2) div {
     text-align: justify;
     font-size: 48.5cqi;
-    overflow: hidden;
+    /* overflow: hidden; */
     word-spacing: -15%;
     text-indent: 1%;
     line-height: 76%;
@@ -540,14 +553,24 @@ h4:after {
 }
 
 .about {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-around;
     /* border: green 1px solid; */
 }
 
+.face {
+    /* border: green 1px solid; */
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
 .face-img {
-    width: 20%;
     aspect-ratio: 1/1;
-    margin: 2% 10%;
+    width: 50%;
+    /* margin: 2% 10%; */
     overflow: hidden;
     /* border: green 1px solid; */
     border-radius: 50%;
@@ -561,8 +584,9 @@ h4:after {
 
 .personal {
     /* border: green 1px solid; */
-    width: 80%;
+    /* width: 90%; */
     padding: 0 5%;
+    object-fit: contain;
 }
 
 .personal h1 {
@@ -572,18 +596,18 @@ h4:after {
 .contacts {
     /* border: green 1px solid; */
     margin: 2% 0 0 0;
-    list-style-type: none;
-    padding-inline-start: 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6% 1%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
 }
 
 .contact {
     /* border: green 1px solid; */
     width: 100%;
     background-color: #333333AA;
-    border: #7979a1 1.5px solid; 
+    border: #7979a1 1.5px solid;
+    place-items: center;
+    justify-content: center;
 }
 
 .contact:hover {
@@ -603,13 +627,17 @@ h4:after {
 }
 
 .contact-img {
+    /* border: green 1px solid; */
     width: 10%;
     aspect-ratio: 1 / 1;
-    padding: 0 2%;
+    align-items: center;
+    margin: 0 3%;
 }
 
 .contact-img img {
+    /* border: green 1px solid; */
     width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -627,12 +655,13 @@ footer ul {
 }
 
 footer ul li {
-    padding: 0.5em 1em;
     /* border: blue 1px dashed; */
 }
 
 footer ul li a {
+    padding: 0.5em 1em;
     text-decoration: none;
+    display: block;
     /* border: blue 1px dashed; */
     color: #b2b2d9;
 }
@@ -642,15 +671,8 @@ footer ul li:last-child {
     /* border: pink 1px dashed; */
 }
 
-.to-top:hover {
+footer ul li a:hover {
     background-color: #aa313155;
-}
-
-.to-top {
-    /* border: green 1px solid; */
-    display: flex;
-    width: 100%;
-    height: 100%;
 }
 
 #projects, #certification, #about {
