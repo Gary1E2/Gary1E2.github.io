@@ -3,7 +3,13 @@
 }
 
 /* ========== MOBILE RESPONSIVENESS ==========*/
-@media (min-width: 600px) {
+@media (min-width: 400px) {
+    header ul {
+        text-align: center;
+    }
+    header ul li:last-child {
+        display: none;
+    }
     .landing {
         height: 220cqi;
         grid-template-columns: repeat(2, 1fr);
@@ -25,7 +31,10 @@
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
+    header ul {
+        display: flex;
+    }
     .landing {
         height:auto;
         grid-template-columns: repeat(4, 1fr);
@@ -85,12 +94,12 @@ header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
     border-bottom: 1px #394247 solid;
 }
 
 header ul li {
     /* border: 1px green solid; */
+    display: block;
     color: #b2b2d9;
 }
 
@@ -593,7 +602,6 @@ header ul li a:hover {
     /* text-align: justify; */
     color: #b2b2d9;
 }
-
 
 /* ========== CERTIFICATIONS ========== */
 .cert-header {
