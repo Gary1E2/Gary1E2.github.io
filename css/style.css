@@ -4,6 +4,9 @@
 
 /* ========== MOBILE RESPONSIVENESS ==========*/
 @media (min-width: 600px) {
+    header ul li:last-child {
+        display: none;
+    }
     .landing {
         height: 220cqi;
         grid-template-columns: repeat(2, 1fr);
@@ -26,6 +29,9 @@
 }
 
 @media (min-width: 1000px) {
+    header ul {
+        display: flex;
+    }
     .landing {
         height:auto;
         grid-template-columns: repeat(4, 1fr);
@@ -85,7 +91,6 @@ header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
     border-bottom: 1px #394247 solid;
 }
 
