@@ -2,6 +2,50 @@
     font-family: Helvetica, sans-serif, Arial;
 }
 
+/* ========== MOBILE RESPONSIVENESS ==========*/
+@media (min-width: 600px) {
+    .landing {
+        height: 220cqi;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1% 2%;
+        gap: 6% 3%;
+    }
+    .statement {
+        font-size: 3cqi;
+    }
+    .title {
+        font-size: 16cqi;
+    }
+    .project-list {
+        grid-template-columns: repeat(2, 1fr);
+        height: 400cqi;
+    }
+    .cert-name {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .landing {
+        height:auto;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 6% 3%;
+        gap: 12% 6%;
+    }
+    .statement {
+        font-size: 1.38cqi;
+    }
+    .title {
+        font-size: 6.5cqi;
+    }
+    .project-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .project-card {
+        height: auto;
+    }
+}
+
 @keyframes animatedBackground {
 	0% {
 		background-position: 0% 0%
@@ -75,14 +119,10 @@ header ul li a:hover {
 /* ========== LANDING ========== */
 .landing {
     /* border: red 1px dashed; */
-    padding: 0;
-    height: auto;
     place-content: center;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    padding: 6% 3%;
-    gap: 12% 6%;
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-rows: repeat(2, 1fr); */
 }
 
 .landing-square {
@@ -101,6 +141,7 @@ header ul li a:hover {
 @keyframes landingdown {
   from {
     transform: translateY(-200%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
@@ -255,7 +296,6 @@ header ul li a:hover {
 .statement {
     padding: 2.5% 2%;
     /* border: green 1px dashed; */
-    font-size: 1.38cqi;
     text-align: justify;
     margin: 0 -1% 0 -1%;
     color: #b2b2d9;
@@ -293,7 +333,6 @@ header ul li a:hover {
     padding: 0.5% 2%;
     position: relative;
     /* border: green 1px dashed; */
-    font-size: 6.5cqi;
     text-indent: -3%;
     z-index: 1;
 }
@@ -394,7 +433,6 @@ header ul li a:hover {
 
 .project-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 2%;
     padding: 0 2% 2% 2%;
     /* border: green 1px solid; */
@@ -566,10 +604,6 @@ header ul li a:hover {
     font-size: 4em;
 }
 
-.cert-header2 {
-    font-size: 3em;
-}
-
 .cert-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -681,6 +715,7 @@ h4:after {
     -webkit-text-fill-color: transparent; 
     -webkit-background-clip: text;
     font-size: 4em;
+    margin: 8% 0 0 0;
 }
 
 .about {
