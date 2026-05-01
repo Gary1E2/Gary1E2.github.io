@@ -4,6 +4,9 @@
 
 /* ========== MOBILE RESPONSIVENESS ==========*/
 @media (min-width: 400px) {
+    header ul li a {
+        padding: 0.3em 1em;
+    }
     header ul li:last-child {
         display: none;
     }
@@ -20,20 +23,42 @@
         font-size: 16cqi;
     }
     .project-list {
-        grid-template-columns: repeat(2, 1fr);
-        height: 400cqi;
+        grid-template-columns: repeat(1, 1fr);
+        height: 1500cqi;
+        gap: 0.5%;
+    }
+    .cert-header2 {
+        padding: 10% 0 0 0;
     }
     .cert-name {
         font-size: 1em;
     }
+    .cert-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .activity-name {
+        font-size: 1em;
+    }
+    .face-img {
+        width: 80%;
+    }
+    .contact-img {
+        width: 20%;
+    }
 }
 
 @media (min-width: 900px) {
+    header ul li a {
+        padding: 0.5em 1em;
+    }
     header ul {
         display: flex;
     }
+    header ul li:last-child {
+        display: block;
+    }
     .landing {
-        height:auto;
+        height: auto;
         grid-template-columns: repeat(4, 1fr);
         padding: 6% 3%;
         gap: 12% 6%;
@@ -46,9 +71,29 @@
     }
     .project-list {
         grid-template-columns: repeat(4, 1fr);
+        height: auto;
+        gap: 2%;
     }
     .project-card {
         height: auto;
+    }
+    .cert-header2 {
+        padding: 0;
+    }
+    .cert-name {
+        font-size: 1.8em;
+    }
+    .cert-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .activity-name {
+        font-size: 1.5em;
+    }
+    .face-img {
+        width: 50%;
+    }
+    .contact-img {
+        width: 10%;
     }
 }
 
@@ -88,6 +133,7 @@ header {
 }
 
 header ul {
+    text-align: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -106,7 +152,6 @@ header ul li:last-child {
 
 header ul li a {
     display: block;
-    padding: 0.5em 1em;
     text-decoration: none;
     transition: all 0.3s ease;
     color: #b2b2d9;
@@ -438,7 +483,6 @@ header ul li a:hover {
 
 .project-list {
     display: grid;
-    gap: 2%;
     padding: 0 2% 2% 2%;
     /* border: green 1px solid; */
 }
@@ -611,7 +655,6 @@ header ul li a:hover {
 
 .cert-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 5%;
     padding: 0 2% 2% 2%;
     /* border: green 1px solid; */
@@ -740,7 +783,6 @@ h4:after {
 
 .face-img {
     aspect-ratio: 1/1;
-    width: 50%;
     /* margin: 2% 10%; */
     overflow: hidden;
     border: #ff3131 10px solid;
@@ -805,7 +847,6 @@ h4:after {
 
 .contact-img {
     /* border: green 1px solid; */
-    width: 10%;
     aspect-ratio: 1 / 1;
     align-items: center;
     margin: 0 3%;
